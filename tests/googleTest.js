@@ -11,7 +11,7 @@ module.exports = {
     "@tags": ["test"],
     Wikipedia: function(client) {
         client
-            .url("https://fr.wikipedia.org/wiki/Dab#:~:text=Le%20dab%20est%20un%20mouvement,avec%20les%20deux%20bras%20parall%C3%A8les.")
+            .url("https://localhost:4200")
             .waitForElementPresent("body", 10000)
             .assert.title("Dab — Wikipédia")
             .end();
