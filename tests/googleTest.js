@@ -13,7 +13,7 @@ module.exports = {
         client
             .url("https://fr.wikipedia.org/wiki/Dab#:~:text=Le%20dab%20est%20un%20mouvement,avec%20les%20deux%20bras%20parall%C3%A8les.")
             .waitForElementPresent("body", 10000)
-            .assert.title("Dab --- Wikipédia")
+            .assert.title("Dab — Wikipédia")
             .end();
     },
     after: function(browser) {
