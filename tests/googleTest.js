@@ -11,11 +11,9 @@ module.exports = {
     "@tags": ["test"],
     Google: function(client) {
         client
-            .url("https://www.google.com/ncr")
+            .url("https://fr.wikipedia.org/wiki/Dab#:~:text=Le%20dab%20est%20un%20mouvement,avec%20les%20deux%20bras%20parall%C3%A8les.")
             .waitForElementPresent("body", 10000)
-            .setValue("input[type=text]", "LambdaTest\n")
-            .pause(1000)
-            .assert.title("LambdaTest - Google zoeken")
+            .assert.title("Dab --- Wikipédia")
             .end();
     },
     after: function(browser) {
