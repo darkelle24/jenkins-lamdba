@@ -2,8 +2,10 @@
 
 node_modules/*
 reports/*
-lambda_api.log
 LT.exe
-Jenkinsfile
-lt.log
 README.md
+~/.config/google-chrome/First Run
+~/.config/google-chrome/Local State
+~/.config/google-chrome/Default/Preferences
+lol.py
+chromedriver.exe

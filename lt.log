@@ -1,0 +1,50 @@
+{"level":"info","time":"2021-05-26T15:06:30.690+0200","caller":"cobra/command.go:854","msg":"LambdaTest Tunnel version: 3.1.12"}
+{"level":"debug","time":"2021-05-26T15:06:30.729+0200","caller":"cmd/lt.go:176","msg":"Starting pipeline....."}
+{"level":"debug","time":"2021-05-26T15:06:30.729+0200","caller":"cmd/lt.go:176","msg":"Fetching config"}
+{"level":"warn","time":"2021-05-26T15:06:30.731+0200","caller":"core/lifecycle.go:45","msg":"Tunnel Name was not specified, using: 7093b6e3-1297-4f3c-ae5c-ec11154dc10f"}
+{"level":"debug","time":"2021-05-26T15:06:31.321+0200","caller":"cmd/lt.go:176","msg":"Remote config fetched"}
+{"level":"debug","time":"2021-05-26T15:06:31.568+0200","caller":"runtime/asm_amd64.s:1373","msg":"Trying on port 22"}
+{"level":"debug","time":"2021-05-26T15:06:31.568+0200","caller":"runtime/asm_amd64.s:1373","msg":"Trying over ws"}
+{"level":"debug","time":"2021-05-26T15:06:31.568+0200","caller":"core/lifecycle.go:120","msg":"Starting sink proxy"}
+{"level":"debug","time":"2021-05-26T15:06:31.568+0200","caller":"runtime/asm_amd64.s:1373","msg":"Trying on port 443"}
+{"level":"info","time":"2021-05-26T15:06:31.618+0200","caller":"custom/setup.go:643","msg":"Tunnel binary started on port :9090"}
+{"level":"debug","time":"2021-05-26T15:06:31.910+0200","caller":"runtime/asm_amd64.s:1373","msg":"WSS connection was successful"}
+{"level":"debug","time":"2021-05-26T15:06:32.474+0200","caller":"runtime/asm_amd64.s:1373","msg":"SSH connection over port 443 successful"}
+{"level":"debug","time":"2021-05-26T15:06:32.743+0200","caller":"runtime/asm_amd64.s:1373","msg":"SSH connection over port 22 successful"}
+{"level":"debug","time":"2021-05-26T15:06:33.293+0200","caller":"runtime/asm_amd64.s:1373","msg":"SSH connection over ws successful"}
+{"level":"info","time":"2021-05-26T15:06:33.293+0200","caller":"core/lifecycle.go:97","msg":"Using ssh(over_22) :: connection mode"}
+{"level":"debug","time":"2021-05-26T15:06:33.294+0200","caller":"core/lifecycle.go:215","msg":"Starting control ws connection at wss://ts.lambdatest.com/monitor"}
+{"level":"info","time":"2021-05-26T15:06:33.294+0200","caller":"cmd/lt.go:176","msg":"Launching tunnel"}
+{"level":"debug","time":"2021-05-26T15:06:33.666+0200","caller":"core/lifecycle.go:215","msg":"Control ws channel opened"}
+{"level":"debug","time":"2021-05-26T15:06:33.666+0200","caller":"runtime/asm_amd64.s:1373","msg":"Starting message listener on control connection"}
+{"level":"debug","time":"2021-05-26T15:06:34.387+0200","caller":"runtime/asm_amd64.s:1373","msg":"Tunnel registered message received on control channel"}
+{"level":"debug","time":"2021-05-26T15:06:34.387+0200","caller":"runtime/asm_amd64.s:1373","msg":"controller bus registered"}
+{"level":"debug","time":"2021-05-26T15:06:34.387+0200","caller":"core/lifecycle.go:265","msg":"Using 5 ssh connection"}
+{"level":"debug","time":"2021-05-26T15:06:34.387+0200","caller":"runtime/asm_amd64.s:1373","msg":"Sending tunnel registered message to channels"}
+{"level":"debug","time":"2021-05-26T15:06:35.335+0200","caller":"runtime/asm_amd64.s:1373","msg":"Successfully started remote listener on port: 17968"}
+{"level":"debug","time":"2021-05-26T15:06:35.476+0200","caller":"runtime/asm_amd64.s:1373","msg":"Successfully started remote listener on port: 13480"}
+{"level":"info","time":"2021-05-26T15:06:35.476+0200","caller":"runtime/asm_amd64.s:1373","msg":"You can start testing now"}
+{"level":"info","time":"2021-05-26T15:06:35.476+0200","caller":"runtime/asm_amd64.s:1373","msg":"Tunnel ID: 502869"}
+{"level":"debug","time":"2021-05-26T15:06:35.476+0200","caller":"runtime/asm_amd64.s:1373","msg":"Remote Listener Started on Port 17379"}
+{"level":"debug","time":"2021-05-26T15:06:35.489+0200","caller":"runtime/asm_amd64.s:1373","msg":"Successfully started remote listener on port: 20088"}
+{"level":"debug","time":"2021-05-26T15:06:35.605+0200","caller":"runtime/asm_amd64.s:1373","msg":"Successfully started remote listener on port: 18883"}
+{"level":"debug","time":"2021-05-26T15:06:35.620+0200","caller":"runtime/asm_amd64.s:1373","msg":"Successfully started remote listener on port: 15528"}
+{"level":"debug","time":"2021-05-26T15:10:31.628+0200","caller":"runtime/asm_amd64.s:1373","msg":"handling connect request for URL //www.lambdatest.com:443"}
+{"level":"debug","time":"2021-05-26T15:10:31.630+0200","caller":"runtime/asm_amd64.s:1373","msg":"handling connect request for URL //clients2.google.com:443"}
+{"level":"debug","time":"2021-05-26T15:10:31.867+0200","caller":"runtime/asm_amd64.s:1373","msg":"handling connect request for URL //clientservices.googleapis.com:443"}
+{"level":"debug","time":"2021-05-26T15:10:31.872+0200","caller":"runtime/asm_amd64.s:1373","msg":"handling connect request for URL //www.lambdatest.com:443"}
+{"level":"debug","time":"2021-05-26T15:10:32.061+0200","caller":"runtime/asm_amd64.s:1373","msg":"handling connect request for URL //accounts.google.com:443"}
+{"level":"debug","time":"2021-05-26T15:10:32.597+0200","caller":"runtime/asm_amd64.s:1373","msg":"handling connect request for URL //clients2.googleusercontent.com:443"}
+{"level":"debug","time":"2021-05-26T15:10:33.066+0200","caller":"runtime/asm_amd64.s:1373","msg":"handling connect request for URL //static.cloudflareinsights.com:443"}
+{"level":"debug","time":"2021-05-26T15:10:34.743+0200","caller":"runtime/asm_amd64.s:1373","msg":"handling connect request for URL //www.googleapis.com:443"}
+{"level":"debug","time":"2021-05-26T15:10:38.494+0200","caller":"runtime/asm_amd64.s:1373","msg":"handle http request for kjskzpkdqvitx"}
+{"level":"debug","time":"2021-05-26T15:10:38.494+0200","caller":"runtime/asm_amd64.s:1373","msg":"handle http request for lfksmtbps"}
+{"level":"debug","time":"2021-05-26T15:10:40.145+0200","caller":"runtime/asm_amd64.s:1373","msg":"handle http request for wksdfqswobagfcj"}
+{"level":"debug","time":"2021-05-26T15:10:41.562+0200","caller":"runtime/asm_amd64.s:1373","msg":"handling connect request for URL //ssl.gstatic.com:443"}
+{"level":"debug","time":"2021-05-26T15:10:57.088+0200","caller":"runtime/asm_amd64.s:1373","msg":"handling connect request for URL //www.google.com:443"}
+{"level":"debug","time":"2021-05-26T15:11:05.234+0200","caller":"runtime/asm_amd64.s:1373","msg":"handle http request for google"}
+{"level":"debug","time":"2021-05-26T15:11:06.032+0200","caller":"runtime/asm_amd64.s:1373","msg":"handling connect request for URL //fonts.gstatic.com:443"}
+{"level":"debug","time":"2021-05-26T15:11:06.056+0200","caller":"runtime/asm_amd64.s:1373","msg":"handling connect request for URL //www.gstatic.com:443"}
+{"level":"debug","time":"2021-05-26T15:11:06.072+0200","caller":"runtime/asm_amd64.s:1373","msg":"handling connect request for URL //www.google.fr:443"}
+{"level":"debug","time":"2021-05-26T15:11:07.647+0200","caller":"runtime/asm_amd64.s:1373","msg":"handling connect request for URL //translate.googleapis.com:443"}
+{"level":"info","time":"2021-05-26T15:11:27.215+0200","caller":"runtime/asm_amd64.s:1373","msg":"Tunnel closure requested from server. Exiting"}
