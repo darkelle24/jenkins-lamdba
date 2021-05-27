@@ -35,6 +35,7 @@ node {
    stage('build') {
       // Installing Dependencies
       sh 'npm install'
+      sh 'npm run serve'
     }
 
    stage('test') {
