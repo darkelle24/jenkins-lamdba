@@ -45,7 +45,7 @@ node {
     }
 
     stage('wait') {
-      sh 'sleep 30'
+      sh 'sleep 10'
     }
 
    stage('test') {
