@@ -38,6 +38,7 @@ node {
       sh 'npm install'
       sh 'pm2 start npm --name=test -- run serve'
       sh 'pm2 show 0'
+      sh 'pm2 logs test'
     }
 
    stage('test') {
@@ -49,6 +50,7 @@ node {
           }
    }
    stage('finish') {
+     sh 'pm2 logs test'
      sh 'pm2 stop test'
    }
    stage('end') {
