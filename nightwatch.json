@@ -39,7 +39,8 @@
                 "build": "Nightwatch-Selenium-Sample",
                 "visual": false,
                 "console": true,
-                "network": false
+                "network": false,
+                "tunnel": true
             }
         },
         "chrome": {

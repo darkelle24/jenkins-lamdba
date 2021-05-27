@@ -42,15 +42,17 @@ node {
     }
 
     stage('tunnel') {
-      sh "pm2 start ./LT --name=tunnel -- -user ${env.LT_USERNAME} -key ${env.LT_ACCESS_KEY}"
+      sh 'pm2 start ./LT --name=tunnel --log="./tunnel.log" -- -user ${env.LT_USERNAME} -key ${env.LT_ACCESS_KEY}'
     }
 
     stage('serve') {
-      sh 'pm2 start serve --name=serve -- -s dist --port 8081'
+      sh 'pm2 start serve --name=serve --log="./serve.log" -- -s dist --port 8081'
     }
 
     stage('wait') {
-      sh 'sleep 15'
+      sh 'sleep 30'
+      sh 'cat ./serve.log'
+      sh 'cat ./tunnel.log'
     }
 
    stage('test') {
