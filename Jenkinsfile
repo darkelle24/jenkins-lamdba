@@ -14,7 +14,7 @@ node {
       git branch: 'main',
         url: 'https://github.com/darkelle24/jenkins-lamdba.git'
 
-      sh "wget https://s3.amazonaws.com/lambda-tunnel/LT_Linux.zip"
+      sh "wget https://downloads.lambdatest.com/tunnel/linux/64bit/LT_Linux.zip"
 
       sh 'sudo apt-get -y install nodejs npm'
       sh 'sudo apt-get install --no-act unzip'
