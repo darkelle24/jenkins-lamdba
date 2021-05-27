@@ -34,7 +34,7 @@ node {
    }
    stage('build') {
       // Installing Dependencies
-      sh 'npm install pm2 -g'
+      sh 'sudo npm install pm2 -g'
       sh 'npm install'
       sh 'pm2 start npm --name=test -- run serve'
     }
