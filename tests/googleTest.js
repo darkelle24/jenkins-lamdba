@@ -16,6 +16,15 @@ module.exports = {
             .assert.title("Dab — Wikipédia")
             .end();
     },
+    'default e2e tests': browser => {
+        browser
+            .init()
+            .waitForElementVisible('#app')
+            .assert.elementPresent('.hello')
+            .assert.containsText('h1', 'Welcome to Your Vue.js App')
+            .assert.elementCount('img', 1)
+            .end()
+    },
     after: function(browser) {
         console.log("Closing down...");
     },
