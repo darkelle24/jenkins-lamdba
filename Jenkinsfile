@@ -42,11 +42,12 @@ node {
     }
 
     stage('tunnel') {
+      sh 'pm2 flush'
       sh 'pm2 start ./LT --name=tunnel -- -user djilani@deepbloo.com -key ALJIpRO9gXgEgnpwP2iKomHotn5sHG9Yu9WK33Xz0YWxvsZWnJ'
     }
 
     stage('serve') {
-      sh 'pm2 start serve --name=serve -- dist -l 8080'
+      sh 'pm2 start serve --name=serve -- dist -l 4000'
     }
 
     stage('wait') {
