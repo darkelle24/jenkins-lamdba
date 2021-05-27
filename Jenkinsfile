@@ -47,6 +47,9 @@ node {
 
     stage('serve') {
       sh 'pm2 start serve --name=serve -- -s dist --port 8081'
+    }
+
+    stage('wait') {
       sh 'sleep 15'
     }
 
