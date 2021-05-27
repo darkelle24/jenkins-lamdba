@@ -47,7 +47,7 @@ node {
 
     stage('wait') {
       sh 'sleep 30'
-      sh 'pm2 logs tunnel --lines 50'
+      sh 'pm2 logs tunnel --format --lines 50'
     }
 
    stage('test') {
