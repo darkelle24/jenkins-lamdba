@@ -35,8 +35,8 @@ node {
       // Installing Dependencies
       sh 'sudo npm install pm2 -g'
       sh 'sudo npm install -g serve'
-      sh 'sudo npm install -g @lambdatest/node-rest-client'
-      sh 'sudo npm install -g nightwatch'
+      sh 'sudo npm install @lambdatest/node-rest-client'
+      sh 'sudo npm install nightwatch'
       sh 'npm install'
       sh 'npm run build'
     }
