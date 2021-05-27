@@ -34,21 +34,16 @@ node {
    }
    stage('build') {
       // Installing Dependencies
-      sh 'sudo npm install pm2 -g'
       sh 'npm install'
-      sh 'pm2 start npm --name=test -- run serve'
     }
 
    stage('test') {
           try{
-          sh './node_modules/.bin/nightwatch -e chrome,edge tests'
+          sh 'npm run test:e2e'
           }
           catch (err){
           echo err
           }
-   }
-   stage('finish') {
-     sh 'pm2 stop test'
    }
    stage('end') {
      echo "Success"

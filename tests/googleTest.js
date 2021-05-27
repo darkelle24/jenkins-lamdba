@@ -1,4 +1,3 @@
-var https = require("https");
 var lambdaRestClient = require("@lambdatest/node-rest-client");
 var lambdaCredentials = {
     username: "djilani@deepbloo.com",
@@ -8,14 +7,6 @@ var lambdaAutomationClient = lambdaRestClient.AutomationClient(
     lambdaCredentials
 );
 module.exports = {
-    "@tags": ["test"],
-    Wikipedia: function(client) {
-        client
-            .url("http://localhost:8081")
-            .waitForElementPresent("body", 100000)
-            .assert.title("Dab — Wikipédia")
-            .end();
-    },
     'default e2e tests': browser => {
         browser
             .init()
@@ -23,6 +14,13 @@ module.exports = {
             .assert.elementPresent('.hello')
             .assert.containsText('h1', 'Welcome to Your Vue.js App')
             .assert.elementCount('img', 1)
+            .end()
+    },
+
+    'example e2e test using a custom command': browser => {
+        browser
+            .openHomepage()
+            .assert.elementPresent('.hello')
             .end()
     },
     after: function(browser) {
