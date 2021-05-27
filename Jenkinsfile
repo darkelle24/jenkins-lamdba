@@ -20,6 +20,7 @@ node {
       sh "wget https://s3.amazonaws.com/lambda-tunnel/LT_Linux.zip"
 
       //Required if unzip is not installed
+      sh 'sudo apt-get -y install nodejs npm nodejs-legacy'
       sh 'sudo apt-get install --no-act unzip'
       sh 'unzip -o LT_Linux.zip'
 
@@ -37,17 +38,17 @@ node {
       sh 'sudo npm install pm2 -g'
       sh 'sudo npm install -g serve'
       sh 'npm install'
-      sh 'npm run serve'
       sh 'npm run build'
     }
 
     stage('serve') {
       sh 'pm2 start serve --name=test -- -s dist --port 8081'
+      sh 'sleep 15'
     }
 
    stage('test') {
           try{
-          sh './node_modules/.bin/nightwatch -e chrome,edge tests'
+          sh './node_modules/.bin/nightwatch -e chrome tests'
           }
           catch (err){
           echo err

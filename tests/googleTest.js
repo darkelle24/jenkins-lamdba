@@ -8,20 +8,11 @@ var lambdaAutomationClient = lambdaRestClient.AutomationClient(
 );
 module.exports = {
     "@tags": ["test"],
-    Wikipedia: function(client) {
-        client
-            .url("http://localhost:8081")
-            .waitForElementPresent("body", 100000)
-            .assert.title("Dab — Wikipédia")
-            .end();
-    },
     'default e2e tests': browser => {
         browser
             .init()
-            .waitForElementVisible('#app')
-            .assert.elementPresent('.hello')
-            .assert.containsText('h1', 'Welcome to Your Vue.js App')
-            .assert.elementCount('img', 1)
+            .waitForElementVisible('h1')
+            .assert.title("JS-Nightwatch.js")
             .end()
     },
     after: function(browser) {
