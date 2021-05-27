@@ -36,7 +36,7 @@ node {
       // Installing Dependencies
       sh 'npm install pm2 -g'
       sh 'npm install'
-      sh 'pm2 start npm --name=app-name -- run serve'
+      sh 'pm2 start npm --name=test -- run serve'
     }
 
    stage('test') {
@@ -46,6 +46,9 @@ node {
           catch (err){
           echo err
           }
+   }
+   stage('finish') {
+     sh 'pm2 stop test'
    }
    stage('end') {
      echo "Success"
