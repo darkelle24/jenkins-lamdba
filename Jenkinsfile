@@ -38,6 +38,7 @@ node {
 
     stage('tunnel') {
       sh 'pm2 flush all'
+      sh './LT -user djilani@deepbloo.com -key ALJIpRO9gXgEgnpwP2iKomHotn5sHG9Yu9WK33Xz0YWxvsZWnJ'
       sh 'pm2 start ./LT --name=tunnel -- -user djilani@deepbloo.com -key ALJIpRO9gXgEgnpwP2iKomHotn5sHG9Yu9WK33Xz0YWxvsZWnJ'
     }
 
@@ -47,7 +48,6 @@ node {
 
     stage('wait') {
       sh 'sleep 30'
-      sh 'pm2 logs tunnel --format --lines 50'
     }
 
    stage('test') {
