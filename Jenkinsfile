@@ -20,7 +20,7 @@ node {
       sh "wget https://s3.amazonaws.com/lambda-tunnel/LT_Linux.zip"
 
       //Required if unzip is not installed
-      sh 'sudo apt-get -y install nodejs npm nodejs-legacy'
+      sh 'sudo apt-get -y install nodejs npm'
       sh 'sudo apt-get install --no-act unzip'
       sh 'unzip -o LT_Linux.zip'
 
