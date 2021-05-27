@@ -26,7 +26,6 @@ node {
       //Starting Tunnel Process
       sh "./LT -user ${env.LT_USERNAME} -key ${env.LT_ACCESS_KEY} &"
       sh  "rm -rf LT_Linux.zip"
-      sh 'npm install -g @vue/cli'
     }
     catch (err){
       echo err
