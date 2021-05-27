@@ -32,8 +32,8 @@
                 "enabled": true,
                 "path": ""
             },
-            "username": "djilani@deepbloo.com",
-            "access_key": "ALJIpRO9gXgEgnpwP2iKomHotn5sHG9Yu9WK33Xz0YWxvsZWnJ",
+            "username": "",
+            "access_key": "",
             "skip_testcases_on_fail": false,
             "desiredCapabilities": {
                 "build": "Nightwatch-Selenium-Sample",

@@ -24,8 +24,6 @@ node {
       sh 'sudo apt-get install --no-act unzip'
       sh 'unzip -o LT_Linux.zip'
 
-      //Starting Tunnel Process
-      sh "./LT -user ${env.LT_USERNAME} -key ${env.LT_ACCESS_KEY} &"
       sh  "rm -rf LT_Linux.zip"
     }
     catch (err){
@@ -37,12 +35,18 @@ node {
       // Installing Dependencies
       sh 'sudo npm install pm2 -g'
       sh 'sudo npm install -g serve'
+      sh 'sudo npm install -g @lambdatest/node-rest-client'
+      sh 'sudo npm install -g nightwatch'
       sh 'npm install'
       sh 'npm run build'
     }
 
+    stage('tunnel') {
+      sh "pm2 start ./LT --name=tunnel -- -user ${env.LT_USERNAME} -key ${env.LT_ACCESS_KEY}"
+    }
+
     stage('serve') {
-      sh 'pm2 start serve --name=test -- -s dist --port 8081'
+      sh 'pm2 start serve --name=serve -- -s dist --port 8081'
       sh 'sleep 15'
     }
 
