@@ -11,7 +11,9 @@ module.exports = {
     "@tags": ["test"],
     Wikipedia: function(client) {
         client
-            .url("http://localhost:8081")
+            .init()
+            .waitForElementVisible('#app')
+            //.url("http://localhost:8081")
             .waitForElementPresent("body", 10000)
             .assert.title("Dab — Wikipédia")
             .end();
