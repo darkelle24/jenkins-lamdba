@@ -37,6 +37,7 @@ node {
       sh 'sudo npm install pm2 -g'
       sh 'sudo npm install -g serve'
       sh 'npm install'
+      sh 'npm run serve'
       sh 'npm run build'
     }
 
