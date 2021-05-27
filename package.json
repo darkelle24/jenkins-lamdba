@@ -5,7 +5,7 @@
     "scripts": {
         "serve": "vue-cli-service serve",
         "build": "vue-cli-service build",
-        "test:e2e": "vue-cli-service test:e2e tests/googleTest.js --config",
+        "test:e2e": "vue-cli-service test:e2e -e chrome,firefox,edge,safari tests",
         "lint": "vue-cli-service lint",
         "test": "./node_modules/.bin/nightwatch -e chrome,firefox,edge,safari tests"
     },
