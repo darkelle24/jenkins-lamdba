@@ -10,16 +10,12 @@ node {
 
    stage('setup') {
 
-      // Get some code from a GitHub repository
     try{
       git branch: 'main',
         url: 'https://github.com/darkelle24/jenkins-lamdba.git'
 
-
-            //Download Tunnel Binary
       sh "wget https://s3.amazonaws.com/lambda-tunnel/LT_Linux.zip"
 
-      //Required if unzip is not installed
       sh 'sudo apt-get -y install nodejs npm'
       sh 'sudo apt-get install --no-act unzip'
       sh 'unzip -o LT_Linux.zip'
@@ -32,7 +28,6 @@ node {
 
    }
    stage('build') {
-      // Installing Dependencies
       sh 'sudo npm install pm2 -g'
       sh 'sudo npm install -g serve'
       sh 'sudo npm install @lambdatest/node-rest-client'
@@ -42,7 +37,7 @@ node {
     }
 
     stage('tunnel') {
-      sh 'pm2 flush'
+      sh 'pm2 flush all'
       sh 'pm2 start ./LT --name=tunnel -- -user djilani@deepbloo.com -key ALJIpRO9gXgEgnpwP2iKomHotn5sHG9Yu9WK33Xz0YWxvsZWnJ'
     }
 
@@ -52,19 +47,20 @@ node {
 
     stage('wait') {
       sh 'sleep 30'
-      sh 'pm2 logs serve --lines 50'
       sh 'pm2 logs tunnel --lines 50'
     }
 
    stage('test') {
-          try{
-          sh './node_modules/.bin/nightwatch -e chrome tests'
-          }
-          catch (err){
-          echo err
-          }
+      try {
+        sh './node_modules/.bin/nightwatch -e chrome tests'
+      } catch (err) {
+        echo err
+      }
    }
    stage('end') {
+     sh 'pm2 stop tunnel'
+     sh 'pm2 stop serve'
+     sh 'pm2 flush'
      echo "Success"
      }
  }
