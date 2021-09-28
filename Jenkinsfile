@@ -8,7 +8,7 @@ node {
     echo env.LT_USERNAME
     echo env.LT_ACCESS_KEY
 
-   stage('setup') {
+   stage('setup2') {
 
     try{
       git branch: 'main',
